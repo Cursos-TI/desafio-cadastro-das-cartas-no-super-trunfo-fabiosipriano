@@ -11,11 +11,11 @@ int main() {
     char codigocarta1[3], nomecidade1[20], estado1[20], codigocarta2[3], nomecidade2[20], estado2[20];
     // Cadastro das Cartas:
     printf("Iniciando cadastro da primeira carta\nInsira o codigo da carta:\n");
-    scanf("%s", codigocarta1);       
+    scanf("%3s", codigocarta1);       
     printf("Insira o ESTADO da carta:\n");
-    scanf("%s", estado1);
+    scanf("%20s", estado1);
     printf("Insira o nome da cidade:\n");
-    scanf("%s", nomecidade1);
+    scanf("%20s", nomecidade1);
     printf("Insira a população:\n");
     scanf("%d", &populacao1);
     printf("Insira a área em km²:\n");
@@ -25,11 +25,11 @@ int main() {
     printf("Insira o número de pontos turisticos:\n");
     scanf("%d", &numeropontoturistico1);
     printf("\nIniciando cadastro da segunda carta\nInsira o código da carta:\n");
-    scanf("%s", codigocarta2);       
+    scanf("%3s", codigocarta2);       
     printf("Insira o ESTADO da carta:\n");
-    scanf("%s", estado2);
+    scanf("%20s", estado2);
     printf("Insira o nome da cidade:\n");
-    scanf("%s", nomecidade2);
+    scanf("%20s", nomecidade2);
     printf("Insira a população:\n");
     scanf("%d", &populacao2);
     printf("Insira a área em km²:\n");
@@ -47,17 +47,17 @@ int main() {
     superpoder2 = (float) populacao2 + area2 + pib2 + numeropontoturistico2 + pibpercapta2 + (1/densidade2);
     // Questionamento do valor de comparação:
     printf("Selecione um dos valores para comparação:\nPressione 1 para comparar População\n2 para comparar área\n3 para comparar PIB\n4 para comparar Número de Pontos Turisticos\n5 para comparar Densidade Demográfica\n");
-    scanf("%d", testedevalor);
+    scanf("%d", &testedevalor);
     //Comparação de valores das cartas
     switch (testedevalor){
     case 1:
         printf("\nVocê selecionou População: \n");
-        print("Cidade: %s possui População: %d\nCidade: %s possui População: %d", nomecidade1, populacao1, nomecidade2, populacao2);
+        printf("Cidade: %s possui População: %d\nCidade: %s possui População: %d\n", nomecidade1, populacao1, nomecidade2, populacao2);
         if (populacao1 > populacao2){
             printf("Cidade %s venceu!", nomecidade1);
         }else{ 
             if (populacao1 == populacao2){
-            print("Os valores são iguais, resultando em um empate!");
+            printf("Os valores são iguais, resultando em um empate!");
             }else {
             printf("Cidade %s venceu!", nomecidade2);
             }
@@ -65,12 +65,12 @@ int main() {
         break;
     case 2:
         printf("\nVocê selecionou Área: \n");
-        print("Cidade: %s possui área: %f\nCidade: %s possui área: %f", nomecidade1, area1, nomecidade2, area2);
+        printf("Cidade: %s possui área: %f\nCidade: %s possui área: %f\n", nomecidade1, area1, nomecidade2, area2);
         if (area1 > area2){
             printf("Cidade %s venceu!", nomecidade1);
         }else{
             if (area1 == area2){
-            print("Os valores são iguais, resultando em um empate!");
+            printf("Os valores são iguais, resultando em um empate!");
             }else {
             printf("Cidade %s venceu!", nomecidade2);
             }
@@ -78,12 +78,12 @@ int main() {
         break;
     case 3:
         printf("\nVocê selecionou PIB: \n");
-        print("Cidade: %s possui PIB: %f\nCidade: %s possui PIB: %f", nomecidade1, pib1, nomecidade2, pib2);
+        printf("Cidade: %s possui PIB: %f\nCidade: %s possui PIB: %f\n", nomecidade1, pib1, nomecidade2, pib2);
         if (pib1 > pib2){
             printf("Cidade %s venceu!", nomecidade1);
         }else{
             if (pib1 == pib2){
-            print("Os valores são iguais, resultando em um empate!");
+            printf("Os valores são iguais, resultando em um empate!");
             }else {
             printf("Cidade %s venceu!", nomecidade2);
             }
@@ -91,12 +91,12 @@ int main() {
         break;
     case 4:
         printf("\nVocê selecionou Número de Pontos Turísticos: \n");
-        print("Cidade: %s possui %d pontos turísticos\nCidade: %s possui %d pontos turísticos", nomecidade1, numeropontoturistico1, nomecidade2, numeropontoturistico2);
+        printf("Cidade: %s possui %d pontos turísticos\nCidade: %s possui %d pontos turísticos\n", nomecidade1, numeropontoturistico1, nomecidade2, numeropontoturistico2);
         if (numeropontoturistico1 > numeropontoturistico2){
             printf("Cidade %s venceu!", nomecidade1);
         }else{
             if (numeropontoturistico1 == numeropontoturistico2){
-            print("Os valores são iguais, resultando em um empate!");
+            printf("Os valores são iguais, resultando em um empate!");
             }else {
             printf("Cidade %s venceu!", nomecidade2);
             }
@@ -105,12 +105,12 @@ int main() {
         break;
     case 5:
         printf("\nVocê selecionou Densidade Demográfica: \n");
-        print("Cidade: %s possui densidade demográfica: %f\nCidade: %s possui densidade demográfica: %f", nomecidade1, densidade1, nomecidade2, densidade2);
+        printf("Cidade: %s possui densidade demográfica: %f\nCidade: %s possui densidade demográfica: %f\n", nomecidade1, densidade1, nomecidade2, densidade2);
         if (densidade1 < densidade2){
             printf("Cidade %s venceu!", nomecidade1);
         }else{
             if (densidade1 == densidade2){
-            print("Os valores são iguais, resultando em um empate!");
+            printf("Os valores são iguais, resultando em um empate!");
             }else {
             printf("Cidade %s venceu!", nomecidade2);
             }
