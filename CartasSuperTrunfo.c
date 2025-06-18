@@ -11,11 +11,11 @@ int main() {
     char codigocarta1[3], nomecidade1[20], estado1[20], codigocarta2[3], nomecidade2[20], estado2[20];
     // Cadastro das Cartas:
     printf("Iniciando cadastro da primeira carta\nInsira o codigo da carta:\n");
-    scanf("%3s", codigocarta1);       
+    scanf("%s", codigocarta1);       
     printf("Insira o ESTADO da carta:\n");
-    scanf("%20s", estado1);
+    scanf("%s", estado1);
     printf("Insira o nome da cidade:\n");
-    scanf("%20s", nomecidade1);
+    scanf("%s", nomecidade1);
     printf("Insira a população:\n");
     scanf("%d", &populacao1);
     printf("Insira a área em km²:\n");
@@ -25,11 +25,11 @@ int main() {
     printf("Insira o número de pontos turisticos:\n");
     scanf("%d", &numeropontoturistico1);
     printf("\nIniciando cadastro da segunda carta\nInsira o código da carta:\n");
-    scanf("%3s", codigocarta2);       
+    scanf("%s", codigocarta2);       
     printf("Insira o ESTADO da carta:\n");
-    scanf("%20s", estado2);
+    scanf("%s", estado2);
     printf("Insira o nome da cidade:\n");
-    scanf("%20s", nomecidade2);
+    scanf("%s", nomecidade2);
     printf("Insira a população:\n");
     scanf("%d", &populacao2);
     printf("Insira a área em km²:\n");
